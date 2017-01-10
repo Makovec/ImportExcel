@@ -116,7 +116,8 @@ ps |
         -IncludePivotChart `
         -ChartType ColumnClustered `
         -PivotRows Company `
-        -PivotData @{PagedMemorySize='sum';PeakPagedMemorySize='sum'}
+        -
+	@{PagedMemorySize='sum';PeakPagedMemorySize='sum'}
 ```
 ![](https://raw.githubusercontent.com/dfinke/ImportExcel/master/images/PivotAsRows.png)
 
@@ -358,7 +359,7 @@ Or, check out the short ***"How To"*** video.
 * Now import Excel sheets even if the file is open in Excel. Thank you [Francois Lachance-Guillemette](https://github.com/francoislg)
 
 #### 7/09/2015
-* For -PivotRows you can pass a `hashtable` with the name of the property and the type of calculation. `Sum`, `Average`, `Max`, `Min`, `Product`, `StdDev`, `StdDevp`, `Var`, `Varp`
+* For -PivotData you can pass a `hashtable` with the name of the property and the type of calculation. `Sum`, `Average`, `Max`, `Min`, `Product`, `StdDev`, `StdDevp`, `Var`, `Varp`
 
 ```powershell
 Get-Service |
